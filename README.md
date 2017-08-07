@@ -2,7 +2,8 @@
 
 [![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-maven-travis.svg?branch=test)](https://travis-ci.org/BlackDuckCoPilot/example-maven-travis) [![Black Duck Security Risk](https://test.duckbuild.io/github/groups/BlackDuckCoPilot/locations/example-maven-travis/public/results/branches/test/badge-risk.svg)](https://test.duckbuild.io/github/groups/BlackDuckCoPilot/locations/example-maven-travis/public/results/branches/test)
 
-Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
+This branch shows a working setup for Black Duck CoPilot's testing server.
+An example for public use can be found [here](https://github.com/BlackDuckCoPilot/example-maven-travis).
 
 ## Travis CI Setup
 
