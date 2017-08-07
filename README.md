@@ -10,7 +10,6 @@ The `.travis.yml` file has been modified to upload the generated data to Black D
 
 ```yaml
 after_success:
-- mvn com.blackducksoftware.integration:hub-maven-plugin:2.0.0:build-bom -Dhub.output.directory=. -Dhub.deploy.bdio=false
-- bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./*_bdio.jsonld
+  - mvn com.blackducksoftware.integration:hub-maven-plugin:2.0.2:build-bom -Dhub.output.directory=. -Dhub.deploy.bdio=false
+  - bash <(curl -s https://test.duckbuild.io/bash/travis) ./*_bdio.jsonld
 ```
-
