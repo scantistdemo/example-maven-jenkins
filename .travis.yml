@@ -7,5 +7,4 @@ jdk:
 - oraclejdk8
 
 after_success:
-  - mvn com.blackducksoftware.integration:hub-maven-plugin:2.0.2:build-bom -Dhub.output.directory=. -Dhub.deploy.bdio=false
-  - bash <(curl -s https://copilot-valid.blackducksoftware.com/bash/travis) ./*_bdio.jsonld
+  - bash <(curl -s http://localhost:8091/ci/travis/scripts/upload)
