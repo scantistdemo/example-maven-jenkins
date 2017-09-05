@@ -5,7 +5,3 @@ notifications:
 
 jdk:
 - oraclejdk8
-
-after_success:
-  - mvn com.blackducksoftware.integration:hub-maven-plugin:2.0.2:build-bom -Dhub.output.directory=. -Dhub.deploy.bdio=false
-  - bash <(curl -s https://copilot.blackducksoftware.com/bash/travis) ./*_bdio.jsonld
