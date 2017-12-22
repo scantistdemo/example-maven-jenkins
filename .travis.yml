@@ -7,5 +7,4 @@ jdk:
 - oraclejdk8
 
 after_success:
-  - export COPILOT_DETECT_VERSION=1.2.0-SNAPSHOT
   - bash <(curl -s https://test.duckbuild.io/ci/travis/scripts/upload)
