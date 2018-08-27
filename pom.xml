@@ -27,6 +27,7 @@
 	<groupId>org.apache.atlas</groupId>
     <artifactId>atlas-dashboardv2</artifactId>
     <version>0.7-incubating</version>
+	    <type>pom</type>
     </dependency>
   </dependencies>
 </project>
