@@ -25,9 +25,8 @@
   <dependencies>
     <dependency>
 	<groupId>org.apache.atlas</groupId>
-	<artifactId>apache-atlas</artifactId>
-	<version>0.7-incubating</version>
-	<type>pom</type>
+    <artifactId>atlas-dashboardv2</artifactId>
+    <version>0.7-incubating</version>
     </dependency>
   </dependencies>
 </project>
