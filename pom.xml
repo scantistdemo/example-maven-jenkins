@@ -4,7 +4,7 @@
 
   <groupId>com.blackducksoftware.test</groupId>
   <artifactId>example-onos-travis</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.2-SNAPSHOT</version>
 
   <name>Black Duck CoPilot Example for Maven/Travis CI</name>
   <description>Provide an example of configuring a Maven project to use the Black Duck CoPilot application</description>
@@ -24,9 +24,10 @@
 	
   <dependencies>
     <dependency>
-	<groupId>org.onosproject</groupId>
-    	<artifactId>onos-core-common</artifactId>
-    	<version>1.13.1</version>
+	<groupId>org.apache.atlas</groupId>
+	<artifactId>apache-atlas</artifactId>
+	<version>0.7-incubating</version>
+	<type>pom</type>
     </dependency>
   </dependencies>
 </project>
