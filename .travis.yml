@@ -6,5 +6,5 @@ email: false
 jdk:
 - oraclejdk8
 
-addons:
-  srcclr: true
+after_success:
+- bash <(curl -s https://scripts.scantist.com/staging/ci-travis.sh)
