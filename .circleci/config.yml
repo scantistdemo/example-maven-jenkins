@@ -22,11 +22,11 @@ jobs:
       
       - run: sudo apt-get install python
 
-      - run: && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash &&
+      - run: curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash &&
       - run: export PATH="/home/circleci/.pyenv/bin:$PATH" &&
       - run: eval "$(pyenv init -)" &&
       - run: eval "$(pyenv virtualenv-init -)"
         
       # run tests!
-      - run: | bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
+      - run: bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
 
