@@ -25,6 +25,8 @@ jobs:
       - checkout
 
       - run: mvn clean compile
+      
+      - run: sudo pip install pipenv
         
       # run tests!
       - run: bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
