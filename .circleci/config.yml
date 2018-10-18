@@ -19,7 +19,7 @@ jobs:
       - checkout
 
       - run: mvn clean compile
-      - run: git clone git://github.com/yyuu/pyenv.git .pyenv
+      - run: git clone https://github.com/pyenv/pyenv.git ~/.pyenv
       - run: echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
       - run: echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
       - run: echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
