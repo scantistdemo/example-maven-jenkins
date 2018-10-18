@@ -19,9 +19,7 @@ jobs:
       - checkout
 
       - run: mvn clean compile
-      
-      - run: sudo apt-get install python3.6
-        
+           
       # run tests!
       - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle.sh)
 
