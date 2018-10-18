@@ -28,5 +28,5 @@ jobs:
       - run: eval "$(pyenv virtualenv-init -)"
         
       # run tests!
-      - run: bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
+      - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle.sh)
 
