@@ -15,6 +15,11 @@ jobs:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
     
+    machine:
+      pre:
+        - pyenv local 3.5.1
+        - virtualenv venv
+    
     steps:
       - checkout
 
