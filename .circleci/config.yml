@@ -5,11 +5,12 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/example-maven-travis
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:8-jdk-browsers
       
-    working_directory: ~/example-maven-travis
+    
 
     environment:
       # Customize the JVM maximum heap limit
