@@ -12,25 +12,27 @@ jobs:
       
     
 
-    environment:
-      # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m
+  #  environment:
+  #    # Customize the JVM maximum heap limit
+  #    MAVEN_OPTS: -Xmx3200m
     
-    machine:
-      pre:
-        - pyenv local 3.5.1
-        - virtualenv venv
+    #machine:
+    #  pre:
+    #    - pyenv local 3.5.1
+     #   - virtualenv venv
     
     steps:
       - checkout
 
-      - run: mvn clean compile
-      - run: git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-      - run: echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-      - run: echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-      - run: echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
-      - run: source ~/.bashrc
-           
-      # run tests!
-      - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle.sh)
+     - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
+      - run: sudo rm -rf /var/lib/apt/lists/*
+      - run: sudo apt-get update
+      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+
+      - run:
+          name: scantist ci scan
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
 
