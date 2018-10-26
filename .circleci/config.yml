@@ -6,35 +6,16 @@ version: 2
 jobs:
   build:
     working_directory: ~/example-maven-travis
+    
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk-browsers
-      
-    
-
-  #  environment:
-  #    # Customize the JVM maximum heap limit
-  #    MAVEN_OPTS: -Xmx3200m
-    
-    #machine:
-    #  pre:
-    #    - pyenv local 3.5.1
-     #   - virtualenv venv
     
     steps:
+    
       - checkout
       
       - run: mvn package
 
-     - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
-      - run: sudo rm -rf /var/lib/apt/lists/*
-      - run: sudo apt-get update
-      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
 
-      - run:
-          name: scantist ci scan
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
 
