@@ -1,4 +1,4 @@
-CSA NICE CoPilot Maven/Travis CI Example
+Cynopsis CoPilot Maven/Travis CI Example
 
 [![Travis CI](https://travis-ci.org/BlackDuckCoPilot/example-maven-travis.svg?branch=master)](https://travis-ci.org/BlackDuckCoPilot/example-maven-travis) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-maven-travis/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-maven-travis/branches/master)
 
